@@ -1,0 +1,377 @@
+/* VARIAVEIS */
+:root {
+    --letraMenu: 1rem;
+    --corLetraMenu: black;
+    --corPrincipal: #D8C4EC;
+    --corSecundaria: #F3EBFA;
+    --corForte: #812FCD;
+    --tamanhoIcones: 1.5rem;
+}
+
+/* MUDAR CONFORME A PAG */
+.menu-lateral .navbar ul a:nth-child(5) {
+    color: var(--corForte);
+}
+
+.menu-lateral .navbar ul a:nth-child(5) li {
+    background-color: var(--corSecundaria);
+}
+
+/* ---------------TIRAR A MARCAÇÃO DOS OUTROS------------ */
+
+.menu-lateral .navbar ul a:nth-child(4) {
+    color: var(--corLetraMenu);
+}
+
+.menu-lateral .navbar ul a:nth-child(4) li {
+    background-color: var(--corPrincipal);
+}
+
+.menu-lateral .navbar ul a:nth-child(6) {
+    color: var(--corLetraMenu);
+}
+
+.menu-lateral .navbar ul a:nth-child(6) li {
+    background-color: var(--corPrincipal);
+}
+
+.menu-lateral .navbar ul a:hover {
+    color: var(--corForte);
+}
+
+/* --------------------------- */
+
+.configuracoes {
+    padding: 0px 10px 10px 40px;
+}
+
+.configuracoes .abas nav {
+    margin-top: 20px;
+    display: flex;
+}
+
+
+.configuracoes .abas nav a {
+    display: inline-block;
+    padding: 8px 15px;
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--letraMenu);
+}
+
+/* quando clico na opcao entra a classe focus */
+.configuracoes .abas nav a.focus,
+.configuracoes.abas nav a:focus {
+    background: white;
+    border-top: solid 1px var(--corForte);
+    border-left: solid 1px var(--corForte);
+    border-right: solid 1px var(--corForte);
+    color: var(--corForte);
+}
+
+
+.configuracoes .abas section {
+    display: none;
+    border-top: 1px solid #812FCD;
+    margin-top: -1px;
+}
+
+.configuracoes .abas section:target {
+    display: block;
+}
+
+
+.configuracoes #caixa_lista {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    padding: 30px;
+    background-color: var(--caixa);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.configuracoes #caixa_lista #infos_principais {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.configuracoes #caixa_lista #infos_principais h3 {
+    color: black;
+    font-weight: var(--letraMedia);
+}
+
+
+.configuracoes #caixa_lista #linha {
+    display: flex;
+    flex-direction: row;
+}
+
+.configuracoes #caixa_lista #linha #titulo {
+    font-weight: var(--letraRegular);
+    width: 12.5vw;
+    text-align: center;
+    /* background-color: #812FCD; */
+    margin: 0px 5px
+}
+
+.configuracoes #caixa_lista #linha #titulo_cpf {
+    font-weight: var(--letraRegular);
+    width: 12vw;
+    text-align: center;
+    /* background-color: #812FCD; */
+    margin: 0px 5px
+}
+
+.configuracoes #caixa_lista #linha #titulo_cargo {
+    font-weight: var(--letraRegular);
+    width: 10vw;
+    text-align: center;
+    /* background-color: #812FCD; */
+    margin: 0px 5px
+}
+
+.configuracoes #caixa_lista #linha #titulo_tipo {
+    font-weight: var(--letraRegular);
+    width: 11vw;
+    text-align: center;
+    /* background-color: #812FCD; */
+    margin: 0px 5px
+}
+
+.configuracoes #caixa_lista #linha #titulo:nth-child(6) {
+    width: 4vw;
+    text-align: center;
+    /* background-color: #812FCD; */
+    margin: 0px 5px
+}
+
+.configuracoes #caixa_lista #linha #titulo:nth-child(7) {
+    width: 4vw;
+    text-align: center;
+    /* background-color: #812FCD; */
+    margin: 0px 5px
+}
+
+.configuracoes #caixa_lista #linha #dado_cpf {
+    font-weight: var(--letraRegular);
+    font-size: 15px;
+    width: 12vw;
+    text-align: center;
+    /* background-color: #812FCD; */
+    margin: 0px 5px
+}
+
+
+.configuracoes #caixa_lista #linha #dado_nomeFuncionario {
+    font-weight: var(--letraRegular);
+    font-size: 15px;
+    width: 12.5vw;
+    text-align: center;
+    /* background-color: #812FCD; */
+    margin: 0px 5px
+}
+
+.configuracoes #caixa_lista #linha #dado_cargo {
+    font-weight: var(--letraRegular);
+    font-size: 15px;
+    width: 10vw;
+    text-align: center;
+    /* background-color: #812FCD; */
+    margin: 0px 5px
+}
+
+.configuracoes #caixa_lista #linha #dado_email {
+    font-weight: var(--letraRegular);
+    font-size: 15px;
+    width: 12.5vw;
+    text-align: center;
+    /* background-color: #812FCD; */
+    margin: 0px 5px
+}
+
+.configuracoes #caixa_lista #linha #dado_tipoUsuario {
+    font-weight: var(--letraRegular);
+    font-size: 15px;
+    width: 11vw;
+    text-align: center;
+    /* background-color: #812FCD; */
+    margin: 0px 5px
+}
+
+.configuracoes #caixa_lista #linha #editar {
+    font-weight: var(--letraRegular);
+    font-size: 15px;
+    width: 4vw;
+    text-align: center;
+    /* background-color: #812FCD; */
+    margin: 0px 5px;
+    text-decoration: underline;
+    color: var(--corForte);
+    cursor: pointer;
+}
+
+.configuracoes #caixa_lista #linha #deletar {
+    font-weight: var(--letraRegular);
+    font-size: 15px;
+    width: 4vw;
+    text-align: center;
+    /* background-color: #812FCD; */
+    margin: 0px 5px;
+    text-decoration: underline;
+    color: var(--corForte);
+    cursor: pointer;
+}
+
+.configuracoes #caixa_lista #linha #dado_status {
+    font-weight: var(--letraRegular);
+    font-size: 15px;
+    width: 12.5vw;
+    text-align: center;
+    /* background-color: #812FCD; */
+    margin: 0px 5px
+}
+
+.configuracoes #caixa_lista #linha #dado_idComputador {
+    font-weight: var(--letraRegular);
+    font-size: 15px;
+    width: 12.5vw;
+    text-align: center;
+    /* background-color: #812FCD; */
+    margin: 0px 5px
+}
+
+.configuracoes #caixa_lista #linha #dado_hostName {
+    font-weight: var(--letraRegular);
+    font-size: 15px;
+    width: 12.5vw;
+    text-align: center;
+    /* background-color: #812FCD; */
+    margin: 0px 5px
+}
+
+.configuracoes #caixa_lista #linha #ver_dashboard {
+    font-weight: var(--letraRegular);
+    font-size: 15px;
+    width: 10vw;
+    text-align: center;
+    margin: 0px 5px;
+}
+
+#ver_dashboard a {
+    color: var(--corForte);
+}
+
+#aba1 button {
+    font-family: "Poppins", sans-serif;
+    padding: 8px 10px;
+    border-radius: 5px;
+    background-color: var(--corForte);
+    border: 2px solid var(--corForte);
+    font-weight: 500;
+    font-size: 13px;
+    text-align: center;
+    color: #fff;
+}
+
+#aba1 button:hover {
+    cursor: pointer;
+    background-color: #812fcd00;
+    color: #812FCD;
+    transition: 0.8s;
+}
+
+#aba2 button {
+    font-family: "Poppins", sans-serif;
+    padding: 8px 10px;
+    border-radius: 5px;
+    background-color: var(--corForte);
+    border: 2px solid var(--corForte);
+    font-weight: 500;
+    font-size: 13px;
+    text-align: center;
+    color: #fff;
+}
+
+#aba2 button:hover {
+    cursor: pointer;
+    background-color: #812fcd00;
+    color: #812FCD;
+    transition: 0.8s;
+}
+
+
+/* --------------------------- */
+
+.configuracoes #caixa_cadastro {
+    display: flex;
+    flex-direction: column;
+    width: 74.4vw;
+    text-align: center;
+    margin-top: 1vw;
+    padding: 30px;
+    background-color: var(--caixa);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+#caixa_cadastro h3 {
+    color: var(--corForte);
+    font-size: 1.5vw;
+    font-weight: var(--letraMedia);
+
+}
+
+#caixa_cadastro p {
+    font-size: 15px;
+    margin-top: 1vw;
+    margin-bottom: 20px;;
+}
+
+.campos #linha {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 0.3vw;
+}
+
+.campo input {
+    border-radius: 5px;
+    margin: 0.6vw 1vw;
+    padding: 5px;
+    width: 16vw;
+}
+
+.select_tipo select{
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+
+}
+
+.botoes button {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--corForte);
+    border: 2px solid var(--corForte);
+    font-weight: 500;
+    font-size: 15px;
+    padding: 4px;
+    margin: 15px ;
+    width: 10vw;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+}
+
+.botoes a{
+    text-decoration: none;
+    color: var(--corForte);
+}
+
+.botoes button:hover {
+    cursor: pointer;
+    background-color: #812fcd00;
+    color: #812FCD;
+    transition: 0.8s;
+}
