@@ -11,9 +11,10 @@ function listar() {
 
 function entrar(email, senha) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ", email, senha)
-    var instrucao = `
-        SELECT f.*, fn.idEmpresa FROM funcionario as f join funcao as fn on f.idFuncionario = fn.idFuncionario  WHERE email = '${email}' AND senha = '${senha}' AND flag_administrador = 1;
-    `;
+    // var instrucao = `
+    //     SELECT f.*, fn.idEmpresa FROM funcionario as f join funcao as fn on f.idFuncionario = fn.idFuncionario  WHERE email = '${email}' AND senha = '${senha}' AND flag_administrador = 1;
+    // `;
+    var instrucao = `select email, senha  from Funcionario where email = '${email}' and senha = '${senha}'`
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
@@ -25,7 +26,7 @@ function cadastrar(nome, sobrenome, email, cpf, telefone, senha) {
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucao = `
-    CALL sp_cadastrar_funcionario("${nome}", '${sobrenome}' , '${cpf}', '${telefone}', '${email}', '${senha}');`;
+    EXEC sp_cadastrar_funcionario @nome = '${nome}', @sobrenome = '${sobrenome}', @cpf = '${cpf}', @telefone = '${telefone}', @email = '${email}', @senha = '${senha}';`;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }

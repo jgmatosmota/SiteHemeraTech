@@ -59,26 +59,28 @@ function CadastrarEmpresa() {
                 cnpjServer: cnpjVar,
                 dddServer: dddVar,
                 telefoneServer: telefoneVar,
-                logradouroServer: logradouroVar,
                 cepServer: cepVar,
+                logradouroServer: logradouroVar,
                 complementoServer: complementoVar
 
             })
         }).then(function(resposta) {
-
+            console.log();
             console.log("resposta: ", resposta);
+            // console.log(recordset)
 
             if (resposta.ok) {
 
                 resposta.json().then(function(response) {
+                    console.log(response);
 
-                    dados = response[0]
-                    sessionStorage.ID_EMPRESA = dados[0].idEmpresa
-                    sessionStorage.NOME_EMPRESA = dados[0].nome
+                    sessionStorage.ID_EMPRESA = response[0].idEmpresa;
+                    // sessionStorage.ID_EMPRESA = 1
+                    sessionStorage.NOME_EMPRESA = response[0].nome
 
                     console.log('DEU BOM');
 
-                    window.location = "cadastroFuncionario.html";
+                    // window.location = "cadastroFuncionario.html";
                 })
 
                 // AINDA NAO COLEI O CSS DOS CARD
@@ -144,8 +146,7 @@ function CadastrarFuncionario() {
 
                     resposta.json().then(function(response) {
 
-                        dados = response[0]
-                        sessionStorage.ID_FUNCIONARIO_ADICIONADO = dados[0].idFuncionario
+                        sessionStorage.ID_FUNCIONARIO_ADICIONADO = response[0].idFuncionario;
 
                         console.log('DEU BOM');
 
@@ -153,7 +154,7 @@ function CadastrarFuncionario() {
 
                         // AINDA NAO COLEI O CSS DOS CARD
                         cardErro.style.display = "block";
-                        mensagem_erro.innerHTML = "Cadastro do funcionário feito com sucesso <br>Redirecionando para a tela de Login ";
+                        mensagem_erro.innerHTML = "Cadastro do funcionário feito com sucesso <br>Redirecionando para a tela de Login";
 
                         setTimeout(() => {
                             window.location = "login.html";
@@ -238,9 +239,9 @@ function entrar() {
                     console.log(json);
                     console.log(JSON.stringify(json));
 
-                    sessionStorage.ID_EMPRESA = json.idEmpresa;
-                    sessionStorage.ID_FUNCIONARIO = json.idFuncionario
-                    sessionStorage.NOME_USUARIO = json.nome
+                    // sessionStorage.ID_EMPRESA = json.idEmpresa;
+                    // sessionStorage.ID_FUNCIONARIO = json.idFuncionario
+                    // sessionStorage.NOME_USUARIO = json.nome
 
 
                 });
